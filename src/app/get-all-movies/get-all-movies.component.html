@@ -1,0 +1,44 @@
+<p>
+  All Movies
+</p>
+
+<!-- <div *ngFor="let movie of movies">
+  <div>
+    ID: {{ movie.title }}
+    <br/> Name:
+    <a routerLink="/movie/{{movie.id}}" (href)="getMovie()">{{ movie.title }}</a>
+  </div> -->
+
+<div>
+<h2>save movie</h2>
+
+<form (ngSubmit)="onSubmit(movieForm.value)" #movieForm="ngForm"> <!-- #movieForm="ngForm" -->
+  <div class="form-group">
+    <label for="id">Id</label>
+    <input type="text" class="form-control" ngModel id="id" name="id" required>
+  </div>
+  <div class="form-group">
+    <label for="title">Title</label>
+    <input type="text" class="form-control" id="title" required>
+  </div>
+  <div class="form-group">
+    <label for="imdbId">imdbId</label>
+    <input type="text" class="form-control" id="imdbId" required>
+  </div>
+  <div class="form-group">
+    <label for="poster">Poster</label>
+    <input type="text" class="form-control" id="poster" required>
+  </div>
+  <div class="form-group">
+    <label for="year">Year</label>
+    <input type="text" class="form-control" id="year" required>
+  </div>
+
+  <button type="submit" class="btn btn-success">Submit</button>
+
+</form>
+  
+
+
+
+</div>
